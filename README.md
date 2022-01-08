@@ -15,6 +15,10 @@ JavaScript는 HTML을 제어하여 사용자와 상호작용하는 언어이다.
 
 # 이벤트(Event)
 웹 브라우저에서 일어나는 사건들을 이벤트(event)라고 한다.<br>
+이벤트를 통해서 JavaScript 코드를 실행할 수 있다.<br>
 onclick 사용자가 어떤 것을 클릭하는 사건<br>
 onchange 사용자가 입력하여 어떤 것의 내용을 바꾸는 사건<br>
 onkeydown 사용자가 키보드를 누르는 사건<br>
+
+# 콘솔(Console)
+이미 만들어진 웹 페이지에 콘솔 창을 띄워 JavaScript 코드를 작성하여 문제를 해결할 수 있다.
