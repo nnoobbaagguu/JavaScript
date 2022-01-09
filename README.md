@@ -3,12 +3,15 @@
 [자바스크립트의 시작](https://www.boostcourse.org/cs124)<br>
 
 <h2>1. 웹과 JavaScript</h2>
+
 <h3> WEB과 JavaScript, HTML</h3>
+
 HTML -> 정적(한번 화면에 출력되면 그 모습 그대로 유지됨)<br>
 사용자와 동적으로 상호작용하는 웹페이지를 만들기 위한 기술 -> JavaScript<br>
 =>HTML으로 만들어진 웹 페이지를 JavaScript를 이용하여 사용자와 상호작용할 수 있도록 기능을 추가<br>
 
 <h3>JavaScript의 역할</h3>
+
 JavaScript는 HTML을 제어하여 사용자와 상호작용하는 언어이다.<br>
 웹 페이지는 한 번 출력되면 바뀔 수 없지만, Javascript 코드에 따라서 style 속성이 추가되면서 웹 페이지가 동적으로 변화함.<br>
 
@@ -24,6 +27,7 @@ script 태그 내부에 JavaScript 코드를 작성한다.<br>
 ```
 
 <h3>이벤트(Event)</h3>
+
 웹 브라우저에서 일어나는 사건들을 이벤트(event)라고 한다.<br>
 이벤트를 통해 사용자의 동작을 감지하여 사용자와 웹은 이벤트를 통해 상호작용한다.<br>
 이벤트를 통해서 JavaScript 코드를 실행할 수 있다.<br>
@@ -39,23 +43,95 @@ onkeydown 사용자가 키보드를 누르는 사건<br>
 <input type="button" value="hi" onclick="alert('hi')">
 ```
 
-[HTML Event Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)
+[HTML Event Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)<br>
 
 <h3>콘솔(Console)</h3>
+
 HTML 파일을 수정하지 않고 콘솔을 이용하여 간단하게 JavaScript 코드를 실행할 수 있다.<br>
 Windows 11, Edge 웹 브라우저에서 임의의 웹 페이지를 열고 F12 키를 눌러 DevTools를 실행시킨다. 콘솔 탭을 누르고, JavaScript 코드를 작성하여 실행할 수 있다.<br>
-Enter 키를 누르면 바로 실행되고, Shift 키와 Enter 키를 동시에 누르면 코드를 여러 줄 작성할 수 있다.
+Enter 키를 누르면 바로 실행되고, Shift 키와 Enter 키를 동시에 누르면 코드를 여러 줄 작성할 수 있다.<br>
 
 <h3>JavaScript 데이터 타입 - 숫자, 문자열</h3>
 
-[JavaScript의 타입과 자료구조](https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures)
+[JavaScript의 타입과 자료구조](https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures)<br>
 
 <h3>변수와 대입연산자</h3>
 
-변수의 선언
+변수의 선언<br>
 
 ```
   var word = "hello";
 ```
 
-변수의 값은 변할 수 있고 var (변수의 이름)과 같이 선언한다. 대입연산자 = 왼쪽에는 변수가 오고 오른쪽에는 대입할 값이 온다.
+변수의 값은 변할 수 있고 var (변수의 이름)과 같이 선언한다. 대입연산자 = 왼쪽에는 변수가 오고 오른쪽에는 대입할 값이 온다.<br>
+
+<h3>JavaScript를 통한 웹 브라우저의 제어</h3>
+
+HTML은 정적인 언어이다. 하지만 JavaScript를 통해 HTML 태그의 style 속성을 변경하여 출력되는 웹 페이지의 내용을 동적으로 변경할 수 있다.<br>
+HTML 태그의 style 속성은 CSS 언어로 작성된 코드의 값을 갖는다.<br>
+CSS 언어를 이용하면 웹 페이지에 출력되는 디자인을 변경할 수 있다.<br>
+
+<h3>CSS 기초</h3>
+
+<h4>style 속성</h4>
+
+```
+  <h1 style="color: blue">Javascript<h1>
+```
+
+color: blue 코드가 CSS 코드이다.<br>
+
+<h4>style 태그</h4>
+
+\<div>\</div>, \<span>\</span> 태그<br>
+다른 기능이 없고, CSS나 JavaScript 코드를 삽입하기 위한 태그이다.<br>
+div 태그는 화면 전체를 사용하기 때문에 줄바꿈이 되고, span은 줄바꿈이 되지 않는다.<br>
+div나 span 태그를 만들어 style 속성을 부여하면 이 태그로 감싸진 부분에 디자인이 적용된다.<br><br>
+
+하지만 각 코드에 일일히 div나 span 태그를 사용하여 CSS 코드를 작성하거나, CSS 코드를 수정하는 것은 매우 번거롭다.<br>
+따라서 \<head>\</head> 태그 내부에 \<style>\</style> 태그를 만들고 style 태그 내부에 CSS 코드를 작성한다.
+
+<h4>style 태그와 선택자</h4>
+
+style 태그에 CSS 코드를 작성하기 위해서는, CSS 코드를 작성할 태그들을 선택해야한다.<br>
+태그에 새로운 속성을 부여해서 그룹짓고, 그룹화한 태그들 중에서 필요한 태그를 선택하면된다.<br>
+태그를 그룹화하는 방법에는 id, class, 그리고 태그 그 자체가 있다.<br>
+
+```
+<head>
+<style>
+  .js {
+    color: red;
+  }
+  #first {
+    color: blue;
+  }
+  span {
+    color: green;
+  }
+</style>
+<\head>
+<body>
+  <span class="js">JavaScript</span><br>
+  <span id="first" class="js">JavaScript</span><br>
+<\body>
+```
+
+style 태그 내부에 id의 이름 앞에는 #을 붙이고, class의 이름 앞에는 .를 붙인다. 태그 이름의 경우에는 그대로 작성하면 된다.<br>
+중괄호 내부에는 JavaScript 코드를 작성한다.<br><br>
+
+class는 그룹을 의미하고 id는 특정한 것을 식별하는 것을 의미한다. 따라서 class는 중복하여 여러개의 태그에 적용할 수 있지만 id는 단 하나의 태그에만 사용된다. class 선택자가 id 선택자보다 더 포괄적이고 광범위하다.<br><br>
+
+선택자의 우선순위는 id > class > 태그 이다.<br>
+
+<h3>JavaScript로 제어할 태그 선택하기</h3>
+
+<h4>querySelector 함수</h4>
+
+querySelector 함수를 이용하여 원하는 태그를 선택한다.
+
+```
+document.querySelector("body");
+document.querySelector(".js");
+document.querySelector("$first");
+```
