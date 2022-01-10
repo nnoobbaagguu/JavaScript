@@ -1,3 +1,4 @@
+// long 리터럴의 계산시 주의할 점
 public class OperatorEx9 {
     public static void main(String[] args) {
         long a = 1_000_000 * 1_000_000;
