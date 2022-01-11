@@ -136,7 +136,7 @@ document.querySelector(".js");
 document.querySelector("$first");
 ```
 
-<h2>JavaScript 제어문</h2>
+<h2>2. JavaScript 제어문</h2>
 
 <h3> 프로그램, 프로그래밍, 프로그래머와 JavaScript와 HTML의 차이</h3>
 
@@ -187,4 +187,31 @@ HTML로 만든 웹 페이지는 정적이며 시간의 순서에 따라 실행�
   
 <br>false</p>
 
-<h4></h4>
+<h4>조건문</h4>
+
+<p>if-else문에서 if문의 괄호 안에 있는 boolean data가 true이면 if문 중괄호에 있는 코드가 실행되고 else문 중괄호에 있는 코드는 무시된다.<br>
+반대로 if-else문에서 if문의 괄호 안에 있는 boolean data가 false이면 else문 중괄호에 있는 코드가 실행되고 if문 중괄호에 있는 코드는 무시된다.</p>
+
+<p>[생각해보기] 다음 코드를 실행하였을 때의 결과는 무엇일까요?
+
+```
+<script>
+  document.write('1')
+  if(true) {
+    document.write('2')
+  }
+  else {
+    document.write('3')
+  }
+  if(false) {
+    document.write('4')
+  }
+  else {
+    document.write('5')
+  }
+  document.write('6')
+</script>
+```
+
+1256
+</p>
